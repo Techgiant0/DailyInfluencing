@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advert Content</title>
+    <style>
+
+.custom-menu {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .custom-menu li {
+        margin-left: 20px;
+        margin-top: 30px;
+    }
+
+    .custom-menu li a {
+        text-decoration: none;
+        color: #000; 
+        font-weight: 700;
+        font-family: Arial, sans-serif;
+        transition: background-color 0.7s ease
+    }
+
+    .custom-menu li a:hover {
+        color: #0073e6; /* Hover color */
+    }
+
+    .custom-menu li .active-link {
+        color: #0073e6;
+    }
+
+    .logo{
+        border-radius: 5px;
+        margin-top: -50px;
+        margin-left: 15px;
+    }
+
+    .navbar{
+            min-height: 70px;
+        }
+
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+            font-weight: normal;
+            font-size: xx-large;
+            margin-top: 200px;
+        }
+
+        .bold {
+            font-weight: bolder;
+            color: blue;
+        }
+
+        .mark {
+            font-weight: bolder;
+        }
+
+        .container {
+            display: grid;
+            gap: 10px;
+        }
+
+        .image {
+            background-size: cover;
+            background-position: center;
+            width: 250px;
+            height: 5px;
+            object-fit: cover;
+            padding-top: 100%;
+            border-radius: 10px;
+        }
+
+        .image1 { 
+            background-image: url('./telephone.png');
+
+        }
+        .image2 { 
+            background-image: url('./skateboard.png'); 
+        }
+        .image3 { 
+            background-image: url('./orange.png'); 
+        }
+        .image4 { 
+            background-image: url('./coffee.png');
+        }
+        .image5 { 
+            background-image: url('./doughnut.png'); 
+        }
+        .image6 { 
+            background-image: url('./stairs.png'); 
+        }
+        .image7 { 
+            background-image: url('./megaphone.png'); 
+        }
+
+        /* Mobile layout */
+        @media (max-width: 767px) {
+        
+            
+            .hamburger{
+            display: fixed;
+            cursor: pointer;
+            z-index: 2;
+        }
+        
+        .bar{
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px 0;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            background-color: black;
+          }
+
+              .hamburger{
+                  display: block;
+                  margin-left: 320px;    
+                  padding-top: 20px;                         
+              }
+              
+              .hamburger.active .bar:nth-child(2){
+                  opacity: 0;
+              } 
+              
+              .hamburger.active .bar:nth-child(1){
+                  transform: translateY(8px) rotate(45deg);
+              } 
+              
+              .hamburger.active .bar:nth-child(3){
+                  transform: translateY(-8px) rotate(-45deg);
+              } 
+              
+              .custom-menu{
+                  position: absolute;
+                  left: -100%;
+                  top: 70px;
+                  gap: 0;
+                  flex-direction: column;
+                  width: 100%;
+                  text-align: center;
+                  transition: 0.3s;
+                  background: whitesmoke;
+                  margin-top: -70px;
+                  
+              }
+              
+              .nav-item{
+              margin: 16px 0;
+              }
+              
+              .custom-menu.active{
+                  left: 0;
+              }
+            }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="custom-menu">
+                <li class="nav-item"><a href="#" class="nav-link">Advert Content</a></li>
+                <li class="nav-item"><a href="#" class=" nav-link">Micro Influencers</a></li>
+                <li class="nav-item"><a href="#" class="active-link nav-link">Mega Influencers</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Standard Influencers</a></li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+        <img src="./image.jpg" height="80px" class="logo">  
+    <h1>You Need An <span class="bold">Advert Content</span><span class="mark">?</span></h1>
+    <div class="container">
+        <div class="image image1"></div>
+        <div class="image image2"></div>
+        <div class="image image3"></div>
+        <div class="image image4"></div>
+        <div class="image image5"></div>
+        <div class="image image6"></div>
+        <div class="image image7"></div>
+    </div>
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const customMenu = document.querySelector(".custom-menu");
+        
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            customMenu.classList.toggle("active");
+        })
+        
+        document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            customMenu.classList.remove("active");
+        }))
+        
+        
+    document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        customMenu.classList.remove("active");
+    }));
+    
+    
+    </script>
+</body>
+</html>
