@@ -67,13 +67,9 @@
       }
 
       .mark {
-        font-weight: bolder;
+        font-weight: 900;
       }
 
-      /* .container {
-            display: grid;
-            gap: 10px;
-        } */
       .relative {
         position: relative;
 
@@ -87,22 +83,24 @@
         text-align: center;
         font-weight: normal;
         font-size: 3rem;
-        text-transform: uppercase;
       }
 
       .bold {
-        font-weight: bold;
+        font-weight: 900;
         color: blue;
         font-size: 3rem;
       }
 
+      .bolds{
+        font-weight: 900;
+        font-size: 3rem;
+      }
+
+      p{
+        text-align: center;
+      }
+
       .image {
-        /*
-            width: 250px;
-            height: 5px;
-            object-fit: cover;
-            padding-top: 100%;
-            border-radius: 10px; */
 
         width: 180px;
         height: 180px;
@@ -161,6 +159,66 @@
         right: -250px;
        
       }
+
+      .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            width: 250px;
+            margin-top: 20px;
+        }
+        
+        .wrap{
+            margin-left: -50px;
+        }
+
+        .icon img {
+            width: 30px;
+            height: 30px;
+            margin-bottom: 15px;
+            background-color: blue;
+            border-radius: 50%;
+            padding: 5px;
+            margin-left: -110px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin: 0 0 10px;
+        }
+
+        #correct{
+            margin-left: 50px;
+        }
+
+        .get-access {
+            color: #007bff;
+            font-size: 18px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            margin-right: 50px;
+        }
+
+        .get-access span {
+            margin-left: 5px;
+            transition: transform 0.3s;
+        }
+
+        .get-access:hover span {
+            transform: translateX(5px);
+        }
+
+        .container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
 
       /* Mobile layout */
       @media (max-width: 767px) {
@@ -229,6 +287,15 @@
         .custom-menu.active {
           left: 0;
         }
+
+        .container{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin-left: 50px;
+        }
+
       }
 
       @media (max-width: 542px) {
@@ -257,21 +324,11 @@
 
       <ul class="custom-menu">
         <li class="nav-item">
-          <a href="#" class="nav-link">Advert Content</a>
+          <a href="#" class="nav-link active-link ">Advert Content</a>
         </li>
         <li class="nav-item">
           <a href="micro-influencers2.html" class="nav-link"
-            >Micro Influencers</a
-          >
-        </li>
-        <li class="nav-item">
-          <a href="mega-influencers.html" class="active-link nav-link"
-            >Mega Influencers</a
-          >
-        </li>
-        <li class="nav-item">
-          <a href="standard-influencers.html" class="nav-link"
-            >Standard Influencers</a
+            >Whatsapp tvs/Influencers</a
           >
         </li>
       </ul>
@@ -284,7 +341,7 @@
 
     <div class="relative">
       <h1>
-        You Need An <span class="bold">Advert Content</span
+        YOU NEED AN <span class="bold">ADVERT CONTENT</span
         ><span class="mark">?</span>
       </h1>
 
@@ -295,6 +352,117 @@
       <div class="image image5"></div>
       <div class="image image6"></div>
       <div class="image image7"></div>
+    </div>
+    <h1 class="bolds">Advert Content We Provide</h1>
+    <p>here are a list of advert content we provide</p>
+    <div class="container">
+        <div class="card">
+            <div class="wrap">
+            <div class="icon">
+                <img src="white.png" alt="Icon">
+            </div>
+            <h2>Affiliate content</h2>
+            <a href="#" class="get-access">
+                Get Access <span>➔</span>
+            </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="wrap">
+            <div class="icon">
+                <img src="white.png" alt="Icon">
+            </div>
+            <h2>Forex content</h2>
+            <a href="#" class="get-access">
+                Get Access <span>➔</span>
+            </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="wrap">
+            <div class="icon">
+                <img src="white.png" alt="Icon">
+            </div>
+            <h2>Crypto content</h2>
+            <a href="#" class="get-access">
+                Get Access <span>➔</span>
+            </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="wrap">
+            <div class="icon">
+                <img src="white.png" alt="Icon">
+            </div>
+            <h2 id="correct">Copy writing content</h2>
+            <a href="#" class="get-access">
+                Get Access <span>➔</span>
+            </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="wrap">
+            <div class="icon">
+                <img src="white.png" alt="Icon">
+            </div>
+            <h2>Betting content</h2>
+            <a href="#" class="get-access">
+                Get Access <span>➔</span>
+            </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="wrap">
+            <div class="icon">
+                <img src="white.png" alt="Icon">
+            </div>
+            <h2>Gadgets content</h2>
+            <a href="#" class="get-access">
+                Get Access <span>➔</span>
+            </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="wrap">
+            <div class="icon">
+                <img src="white.png" alt="Icon">
+            </div>
+            <h2>Business content</h2>
+            <a href="#" class="get-access">
+                Get Access <span>➔</span>
+            </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="wrap">
+            <div class="icon">
+                <img src="white.png" alt="Icon">
+            </div>
+            <h2>Clothing content</h2>
+            <a href="#" class="get-access">
+                Get Access <span>➔</span>
+            </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="wrap">
+            <div class="icon">
+                <img src="white.png" alt="Icon">
+            </div>
+            <h2>Perfume content</h2>
+            <a href="#" class="get-access">
+                Get Access <span>➔</span>
+            </a>
+            </div>
+        </div>
     </div>
     <script>
       const hamburger = document.querySelector(".hamburger");
