@@ -1,219 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Advert Content</title>
     <style>
-
-.custom-menu {
+      .custom-menu {
         list-style: none;
         padding-left: 0;
         margin: 0;
         display: flex;
-        justify-content: flex-end;
-    }
+      }
 
-    .custom-menu li {
+      .custom-menu li {
         margin-left: 20px;
-        margin-top: 30px;
-    }
+      }
 
-    .custom-menu li a {
+      .custom-menu li a {
         text-decoration: none;
-        color: #000; 
+        color: #000;
         font-weight: 700;
         font-family: Arial, sans-serif;
-        transition: background-color 0.7s ease
-    }
+        transition: background-color 0.7s ease;
+      }
 
-    .custom-menu li a:hover {
-        color: #0073e6; /* Hover color */
-    }
-
-    .custom-menu li .active-link {
+      .custom-menu li a:hover {
         color: #0073e6;
-    }
+        /* Hover color */
+      }
 
-    .logo{
+      .custom-menu li .active-link {
+        color: #0073e6;
+      }
+
+      .logo {
         border-radius: 5px;
-        margin-top: -50px;
-        margin-left: 15px;
-    }
+        /* margin-top: -50px;
+            margin-left: 15px; */
+      }
 
-    .navbar{
-            min-height: 70px;
-        }
+      .navbar {
+        min-height: 70px;
 
-        body {
-            font-family: sans-serif;
-            margin: 0;
-            padding: 20px;
-            box-sizing: border-box;
-        }
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
 
-        h1 {
-            text-align: center;
-            font-weight: normal;
-            font-size: xx-large;
-            margin-top: 200px;
-        }
+      .hamburger {
+        display: none;
+      }
 
-        .bold {
-            font-weight: bolder;
-            color: blue;
-        }
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 20px;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        position: relative;
+      }
 
-        .mark {
-            font-weight: bolder;
-        }
+      .mark {
+        font-weight: bolder;
+      }
 
-        .container {
+      /* .container {
             display: grid;
             gap: 10px;
-        }
+        } */
+      .relative {
+        position: relative;
 
-        .image {
-            background-size: cover;
-            background-position: center;
+        margin-top: 200px;
+        margin-bottom: 500px;
+        max-width: 600px;
+        margin-inline: auto;
+      }
+
+      h1 {
+        text-align: center;
+        font-weight: normal;
+        font-size: 3rem;
+        text-transform: uppercase;
+      }
+
+      .bold {
+        font-weight: bold;
+        color: blue;
+        font-size: 3rem;
+      }
+
+      .image {
+        /*
             width: 250px;
             height: 5px;
             object-fit: cover;
             padding-top: 100%;
-            border-radius: 10px;
+            border-radius: 10px; */
+
+        width: 180px;
+        height: 180px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+      }
+
+      .image1 {
+        background-image: url("./telephone.png");
+        position: absolute;
+        top: -30px;
+        left: -280px;
+      }
+
+      .image2 {
+        background-image: url("./stairs.png");
+        position: absolute;
+        top: -10px;
+        right: -250px;
+        /* left: calc(100% - 180px + 250px); */
+      }
+
+      .image3 {
+        background-image: url("./coffee.png");
+        position: absolute;
+        top: 250px;
+        left: -350px;
+      }
+
+      .image4 {
+        background-image: url("./orange.png");
+        position: absolute;
+        top: 250px;
+        left: -125px;
+      }
+
+      .image5 {
+        background-image: url("./doughnut.png");
+        position: absolute;
+        top: 300px;
+        left: 150px;
+      }
+
+      .image6 {
+        background-image: url("./skateboard.png");
+        position: absolute;
+        top: 250px;
+        right: -10px;
+      }
+
+      .image7 {
+        background-image: url("./megaphone.png");
+        position: absolute;
+        top: 320px;
+        right: -250px;
+        /* left: calc(100% - 180px + 250px); */
+      }
+
+      /* Mobile layout */
+      @media (max-width: 767px) {
+        .hamburger {
+          cursor: pointer;
+          z-index: 2;
+
+          display: block;
         }
 
-        .image1 { 
-            background-image: url('./telephone.png');
-
-        }
-        .image2 { 
-            background-image: url('./skateboard.png'); 
-        }
-        .image3 { 
-            background-image: url('./orange.png'); 
-        }
-        .image4 { 
-            background-image: url('./coffee.png');
-        }
-        .image5 { 
-            background-image: url('./doughnut.png'); 
-        }
-        .image6 { 
-            background-image: url('./stairs.png'); 
-        }
-        .image7 { 
-            background-image: url('./megaphone.png'); 
+        h1,  .bold {
+          font-size: 2rem;
         }
 
-        /* Mobile layout */
-        @media (max-width: 767px) {
-        
-            
-            .hamburger{
-            display: fixed;
-            cursor: pointer;
-            z-index: 2;
-        }
-        
-        .bar{
-            display: block;
-            width: 25px;
-            height: 3px;
-            margin: 5px 0;
-            -webkit-transition: all 0.3s ease-in-out;
-            transition: all 0.3s ease-in-out;
-            background-color: black;
-          }
+        .image1 {
+        left: -180px;
+      }
 
-              .hamburger{
-                  display: block;
-                  margin-left: 320px;    
-                  padding-top: 20px;                         
-              }
-              
-              .hamburger.active .bar:nth-child(2){
-                  opacity: 0;
-              } 
-              
-              .hamburger.active .bar:nth-child(1){
-                  transform: translateY(8px) rotate(45deg);
-              } 
-              
-              .hamburger.active .bar:nth-child(3){
-                  transform: translateY(-8px) rotate(-45deg);
-              } 
-              
-              .custom-menu{
-                  position: absolute;
-                  left: -100%;
-                  top: 70px;
-                  gap: 0;
-                  flex-direction: column;
-                  width: 100%;
-                  text-align: center;
-                  transition: 0.3s;
-                  background: whitesmoke;
-                  margin-top: -70px;
-                  
-              }
-              
-              .nav-item{
-              margin: 16px 0;
-              }
-              
-              .custom-menu.active{
-                  left: 0;
-              }
-            }
+       .image2 {
+        right: -180px; 
+      }
+
+      .image4 {
+        left: -150px;
+      }
+
+      .image5 {
+        background-image: url("./doughnut.png");
+        position: absolute;
+        top: 200px;
+        left: 50px;
+      }
+
+      .image6 {
+        right: -100px;
+      }
+
+
+        .bar {
+          display: block;
+          width: 25px;
+          height: 3px;
+          margin: 5px 0;
+          -webkit-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+          background-color: black;
+        }
+
+        .hamburger.active .bar:nth-child(2) {
+          opacity: 0;
+        }
+
+        .hamburger.active .bar:nth-child(1) {
+          transform: translateY(8px) rotate(45deg);
+        }
+
+        .hamburger.active .bar:nth-child(3) {
+          transform: translateY(-8px) rotate(-45deg);
+        }
+
+        .custom-menu {
+          position: absolute;
+          left: -100%;
+          top: 70px;
+          gap: 0;
+          flex-direction: column;
+          width: 100%;
+          text-align: center;
+          transition: 0.3s;
+          background: whitesmoke;
+          margin-top: -70px;
+        }
+
+        .nav-item {
+          margin: 16px 0;
+        }
+
+        .custom-menu.active {
+          left: 0;
+        }
+      }
+
+
     </style>
-</head>
-<body>
+  </head>
+
+  <body>
     <nav class="navbar">
-        <ul class="custom-menu">
-                <li class="nav-item"><a href="#" class="nav-link">Advert Content</a></li>
-                <li class="nav-item"><a href="#" class=" nav-link">Micro Influencers</a></li>
-                <li class="nav-item"><a href="#" class="active-link nav-link">Mega Influencers</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Standard Influencers</a></li>
-        </ul>
-        <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
+      <img src="./image.jpg" height="80px" class="logo" />
+
+      <ul class="custom-menu">
+        <li class="nav-item">
+          <a href="#" class="nav-link">Advert Content</a>
+        </li>
+        <li class="nav-item">
+          <a href="micro-influencers2.html" class="nav-link"
+            >Micro Influencers</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="mega-influencers.html" class="active-link nav-link"
+            >Mega Influencers</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="standard-influencers.html" class="nav-link"
+            >Standard Influencers</a
+          >
+        </li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
     </nav>
-        <img src="./image.jpg" height="80px" class="logo">  
-    <h1>You Need An <span class="bold">Advert Content</span><span class="mark">?</span></h1>
-    <div class="container">
-        <div class="image image1"></div>
-        <div class="image image2"></div>
-        <div class="image image3"></div>
-        <div class="image image4"></div>
-        <div class="image image5"></div>
-        <div class="image image6"></div>
-        <div class="image image7"></div>
+
+    <div class="relative">
+      <h1>
+        You Need An <span class="bold">Advert Content</span
+        ><span class="mark">?</span>
+      </h1>
+
+      <div class="image image1"></div>
+      <div class="image image2"></div>
+      <div class="image image3"></div>
+      <div class="image image4"></div>
+      <div class="image image5"></div>
+      <div class="image image6"></div>
+      <div class="image image7"></div>
     </div>
     <script>
-        const hamburger = document.querySelector(".hamburger");
-        const customMenu = document.querySelector(".custom-menu");
-        
-        hamburger.addEventListener("click", () => {
-            hamburger.classList.toggle("active");
-            customMenu.classList.toggle("active");
+      const hamburger = document.querySelector(".hamburger");
+      const customMenu = document.querySelector(".custom-menu");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        customMenu.classList.toggle("active");
+      });
+
+      document.querySelectorAll(".nav-link").forEach((n) =>
+        n.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          customMenu.classList.remove("active");
         })
-        
-        document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
-            hamburger.classList.remove("active");
-            customMenu.classList.remove("active");
-        }))
-        
-        
-    document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
-        hamburger.classList.remove("active");
-        customMenu.classList.remove("active");
-    }));
-    
-    
+      );
+
+      document.querySelectorAll(".nav-link").forEach((n) =>
+        n.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          customMenu.classList.remove("active");
+        })
+      );
     </script>
-</body>
+  </body>
 </html>
