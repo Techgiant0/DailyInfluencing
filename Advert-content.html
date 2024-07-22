@@ -159,7 +159,7 @@
         position: absolute;
         top: 320px;
         right: -250px;
-        /* left: calc(100% - 180px + 250px); */
+       
       }
 
       /* Mobile layout */
@@ -183,21 +183,9 @@
         right: -180px; 
       }
 
-      .image4 {
-        left: -150px;
-      }
-
-      .image5 {
-        background-image: url("./doughnut.png");
-        position: absolute;
-        top: 200px;
-        left: 50px;
-      }
-
       .image6 {
-        right: -100px;
+        left: calc(100% - 180px + 10px);
       }
-
 
         .bar {
           display: block;
@@ -243,7 +231,23 @@
         }
       }
 
+      @media (max-width: 542px) {
+        .image6 {
+        left: calc(100% - 180px + 100px);
+      }
+      }
 
+      @media (max-width: 482px) {
+        .image5 {
+        left: 90px;
+      }
+      }
+      @media (max-width: 395px) {
+      
+          .image6 {
+            left: calc(100% - 180px + 180px);
+      }
+      }
     </style>
   </head>
 
